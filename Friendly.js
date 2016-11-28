@@ -21,10 +21,13 @@ var Friendly = (function() {
         biRandom: function() {
             return Math.floor(Math.random() * 2); // randomly returns 1 or 0
         },
-        bottomHTML: function(selector, add) {
+        bottomHTML: function(selector, add, apparatus) {
             if ((typeof selector == "string") && (typeof add == "string")) {
+                if (apparatus == true) {
+                    var add = Friendly.replacer(add);
+                }
                 var target = Friendly.getEl(selector);
-                target.innerHTML = target.innerHTML + add; // puts the value of your input in the bottom of the element with the given SELECTOR
+                target.innerHTML = target.innerHTML + add; // puts the value of your input in the bottom of the element with the given SELECTOR * if you define last variable as true it will allow you to use special embedded text functions *
             } else if (typeof selector !== "string") {
                 console.log("SELECTOR IS UNDEFINED OR DEFINED INCORRECTLY");
             } else if (typeof add !== "string") {
@@ -97,10 +100,13 @@ var Friendly = (function() {
                 return document.querySelector(selector); // gets element by SELECTOR so you can apply actions to it
             } else { console.log("SELECTOR IS UNDEFINED OR DEFINED INCORRECTLY"); }
         },
-        html: function(selector, replace) {
+        html: function(selector, replace, apparatus) {
             if (typeof selector == "string") { 
                 if (typeof replace == "string") {
-                    Friendly.getEl(selector).innerHTML = replace; // replaces the innerHTML value of the element with given SELECTOR with the value of your input
+                    if (apparatus == true) {
+                        var replace = Friendly.replacer(replace);
+                    }
+                    Friendly.getEl(selector).innerHTML = replace; // replaces the innerHTML value of the element with given SELECTOR with the value of your input * if you define last variable as true it will allow you to use special embedded text functions *
                 } else if (typeof replace == "undefined") {
                     return Friendly.getEl(selector).innerHTML; // returns HTML from inside the object with the SELECTOR you input
                 } else {
@@ -185,6 +191,9 @@ var Friendly = (function() {
                 return Math.floor(Math.random() * (max - min)) + min; // randomly returns whole number in betwen MIN and MAX excluding MAX
             } else { console.log('ONE OF THE VARIABLES IS UNDEFINED OR DEFINED INCORRECTLY'); }
         },
+        replacer: function(string) {
+            return string.replace("*","<b>").replace("**","</b>").replace("^","<i>").replace("^^","</i>"); // function used to run all the specialised text apparatus
+        },
         roundDown: function(num) {
             if (typeof num == "number") {
                 return Math.floor(num); // returns the largest integer less than or equal to the number (NUM) * FF.roundUp(1.3); --> 1 *
@@ -199,10 +208,24 @@ var Friendly = (function() {
                 console.log("NUMBER IS UNDEFINED OR DEFINED INCORRECTLY");
             }
         },
-        topHTML: function(selector, add) {
+        textApp: function(selector) {
+            if (typeof selector == "string") {
+                var replace = Friendly.replacer(Friendly.html(selector)); // applies special embedded text functions to the element with the specified SELECTOR if given, if not, applies those to the whole <body> element
+                Friendly.html(selector, replace);
+            } else if (typeof selector == "undefined") {
+                var replace = Friendly.replacer(Friendly.html("body"));
+                Friendly.html("body", replace);
+            } else {
+                console.log("SELECTOR HAS BEEN DEFINED INCORRECTLY");
+            }
+        },
+        topHTML: function(selector, add, apparatus) {
             if ((typeof selector == "string") && (typeof add == "string")) {
-                var target = Friendly.getEl(selector)
-                target.innerHTML = add + target.innerHTML; // puts the value of your input in the top of the element with the given SELECTOR
+                if (apparatus == true) {
+                    var add = Friendly.replacer(add);
+                }
+                var target = Friendly.getEl(selector);
+                target.innerHTML = add + target.innerHTML; // puts the value of your input in the top of the element with the given  SELECTOR * if you define last variable as true it will allow you to use special embedded text functions *
             } else if (typeof selector !== "string") {
                 console.log("SELECTOR IS UNDEFINED OR DEFINED INCORRECTLY");
             } else if (typeof add !== "string") {
@@ -216,14 +239,14 @@ var Friendly = (function() {
         help: {
             biBool: "() // randomly returns TRUE or FALSE",
             biRandom: "() // randomly returns 1 or 0",
-            bottomHTML: "(selector, add) // puts the value of your input (ADD) in the bottom of the element with the given SELECTOR",
+            bottomHTML: "(selector, add, apparatus) // puts the value of your input (ADD) in the bottom of the element with the given SELECTOR * if you define last variable as true it will allow you to use special embedded text functions *",
             cleanEl: "(selector) // makes innerHTML of the selected element (SELECTOR) empty *if SELECTOR is undefined makes <body>'s innerHTML empty*",
             clone: "(selector, num, what) // puts the value of your input (WHAT) inside the element with the given SELECTOR certain amount (NUM) of times",
             css: "(selector, style) // // applies STYLEs to the element with the given SELECTOR",
             delEl: "(parent, child) // removes CHILD from the PARENT",
             getEl: "(selector) // gets element by SELECTOR so you can apply actions to it",
             ifPrime: "(num) // checks if number (NUM) you input is prime and if so returns TRUE, if not so, retuns FALSE",
-            html: "(selector, replace) // replaces the innerHTML value of the element with given SELECTOR with the value of your input (REPLACE) or returns HTML from inside the object with the selector you input if REPLACE is undefined",
+            html: "(selector, replace, apparatus) // replaces the innerHTML value of the element with given SELECTOR with the value of your input (REPLACE) or returns HTML from inside the object with the selector you input if REPLACE is undefined * if you define last variable as true it will allow you to use special embedded text functions *",
             inText: "(selector) // returns innerText from inside the object with the SELECTOR you input",
             fValue: "(selector) // returns the value of the element with specified SELECTOR *SELECTOR must be given inside quotation*",
             inBetween: "(num, min, max) // checks if the number (NUM) is placed in between MIN and MAX *excluding MIN and MAX* and returns TRUE if so of FALSE if not so",
@@ -231,7 +254,8 @@ var Friendly = (function() {
             multiWholeRandom: "(min, max) // randomly returns whole number in betwen MIN and MAX excluding MAX",
             roundDown: "(num) // returns the largest integer less than or equal to the number (NUM) * FF.roundDown(1.3); --> 1 *",
             roundUp: "(num) // returns the smallest integer greater than or equal to the number (NUM) * FF.roundUp(0.02); --> 1 *",
-            topHTML: "(selector, add) // puts the value of your input (ADD) in the top of the element with the given SELECTOR",
+            textApp: "(selector) // applies special embedded text functions to the element with the specified SELECTOR if given, if not, applies those to the whole <body> element",
+            topHTML: "(selector, add, apparatus) // puts the value of your input (ADD) in the top of the element with the given SELECTOR * if you define last variable as true it will allow you to use special embedded text functions *",
         }
     }
 })();
