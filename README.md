@@ -5,7 +5,7 @@ This JS library has been created as an Open Source project. It may be changed, s
 
 To reed more about licence, please open LICENCE.md.txt
 #
-You may visit my (author's) personal web site http://felp.website/
+You may visit my (author's) [personal web site] (http://felp.website/)
 #
 This library has been created to help different people make their JavaScript coding easier by addin some easy-to-use functions. If you want to improve the library you can commit changes on [GitHub] (https://github.com/sharpvik/friendly-js/).
 
@@ -22,14 +22,18 @@ inBetween: function(num, min, max) {
 },
 ```
  ^
+ 
  |
+ 
  |
+ 
 Keys myst be separated with the comma.
 
 When write a console.log message for an error case, please do it using the UPPERCASE.
 #
-If you want to contact me personally you can you the form on the bottom of my personal website http://felp.website/
-Your message will be sent straight to my e-mail account
+If you want to contact me personally, use the form on the bottom of my [personal website] (http://felp.website/).
+
+Your message will be sent straight to my e-mail account.
 #
 I hope you will enjoy the Friendly experience! 
 #
