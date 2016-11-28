@@ -19,7 +19,7 @@ inBetween: function(num, min, max) {
     if ((typeof num == "number") && (typeof min == "number") && (typeof max == "number")) { 
         if ((num > min) && (num < max)) { return true; } else { return false; } // checks if the number (NUM) is placed in between MIN and MAX and returns TRUE if so of FALSE if not so
     } else { console.log('ONE OF THE VARIABLES IS UNDEFINED OR DEFINED INCORRECTLY'); }
-  },
+},
  ^
  |
  |
