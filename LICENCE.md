@@ -3,11 +3,9 @@ Friendly JavaScript Library v1.0
 
 You may visit my (author's) [personal web site] (http://felp.website/).
 #
-Copyright MillerDesign Company.
-
 Released under the [MIT license] (https://opensource.org/licenses/mit-license.php).
 
-Official Copy of The MIT Licence is given below: 
+Official Copy of the MIT Licence is given below: 
 
 #The MIT License (MIT).
 
@@ -17,6 +15,7 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
-# Date: 11-23-2016
+# Date: 11-23-2016.
 #
-# Author Victor Rozenko
+# Author Victor Rozenko.
+# Copyright MillerDesign Company.

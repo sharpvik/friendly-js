@@ -38,7 +38,7 @@ Your message will be sent straight to my e-mail account.
 #
 I hope you will enjoy the Friendly experience! 
 #
-Date 11-23-2016
+Date 11-23-2016.
 #
-# Author Victor Rozenko
-# Copyright MillerDesign Company
+# Author Victor Rozenko.
+# Copyright MillerDesign Company.
