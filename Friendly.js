@@ -5,7 +5,7 @@
  * Copyright MillerDesign Company
  * Released under the MIT license
  * https://opensource.org/licenses/mit-license.php
- * To reed more about licence, please open LICENCE.md test
+ * To reed more about licence, please open LICENCE.md
  *
  * Date: 11-23-2016
  *
