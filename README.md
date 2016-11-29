@@ -7,7 +7,7 @@ To read more about licence, please open LICENCE.md
 #
 You may visit my (author's) [personal web site] (http://felp.website/).
 #
-This library has been created to help different people make their JavaScript coding easier by addin some easy-to-use functions. If you want to improve the library you can commit changes on [GitHub] (https://github.com/sharpvik/friendly-js/).
+This library has been created to help different people make their JavaScript coding easier by addings some easy-to-use functions. If you want to improve the library you can commit changes on [GitHub] (https://github.com/sharpvik/friendly-js/).
 
 All the functions were organized as keys of a single Friendly object.
 
