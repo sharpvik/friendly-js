@@ -5,11 +5,7 @@
  * Copyright MillerDesign Company
  * Released under the MIT license
  * https://opensource.org/licenses/mit-license.php
-<<<<<<< HEAD:Friendly.js
- * To reed more about licence, please open LICENCE.md
-=======
  * To read more about licence, please open LICENCE.md
->>>>>>> victorrozenko:Friendly JavaScript Library v1.0/Friendly.js
  *
  * Date: 11-23-2016
  *
