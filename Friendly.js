@@ -278,4 +278,4 @@ var Friendly = (function() {
     }
 })();
 
-var FF = Friendly; // use FF to refer to the Friendly library and its set of functions some 
+var FF = Friendly; // use FF to refer to the Friendly library and its set of functions some test
