@@ -192,7 +192,7 @@ var Friendly = (function() {
             } else { console.log('ONE OF THE VARIABLES IS UNDEFINED OR DEFINED INCORRECTLY'); }
         },
         replacer: function(string) {
-            return string.replace("*","<b>").replace("**","</b>").replace("^","<i>").replace("^^","</i>").replace("_|","<br>").replace("--S","customize").replace("--s","customize"); // function used to run all the specialised text apparatus
+            return string.replace("*","<b>").replace("**","</b>").replace("^","<i>").replace("^^","</i>").replace("_|","<br>"); // function used to run all the specialised text apparatus
         },
         roundDown: function(num) {
             if (typeof num == "number") {
