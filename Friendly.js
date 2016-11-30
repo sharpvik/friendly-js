@@ -166,6 +166,19 @@ var Friendly = (function() {
                 console.log("VALUE OF INPUT IS INCORRECT");
             }
         },
+        ifSqr: function(num) {
+            if (typeof num == "number") {
+                var dev = Math.sqrt(num),
+                    devDec = dev - Math.floor(dev);
+                if (devDec == 0) {
+                    return true;
+                } else {
+                    return false;
+                }
+            } else {
+                console.log("VALUE OF INPUT IS INCORRECT");
+            }
+        },
         inText: function(selector) {
             if (typeof selector == "string") { 
                 return Friendly.getEl(selector).innerText; // returns TEXT from inside the object with the SELECTOR you input
