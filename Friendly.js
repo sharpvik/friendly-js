@@ -172,7 +172,7 @@ var Friendly = (function() {
         },
         ifSqr: function(num) {
             if (typeof num == "number") {
-                var dev = Math.sqrt(num),
+                var dev = Math.sqrt(num), // checks if the number (NUM) of your input is a square of any rational number and if so returns TRUE, if not so reutrns FALSE
                     devDec = dev - Math.floor(dev);
                 if (devDec == 0) {
                     return true;
@@ -264,6 +264,7 @@ var Friendly = (function() {
             delEl: "(parent, child) // removes CHILD from the PARENT",
             getEl: "(selector) // gets element by SELECTOR so you can apply actions to it",
             ifPrime: "(num) // checks if number (NUM) you input is prime and if so returns TRUE, if not so, retuns FALSE",
+            ifSqr: "(num) // checks if the number (NUM) of your input is a square of any rational number and if so returns TRUE, if not so reutrns FALSE",
             html: "(selector, replace, apparatus) // replaces the innerHTML value of the element with given SELECTOR with the value of your input (REPLACE) or returns HTML from inside the object with the selector you input if REPLACE is undefined * if you define last variable as true it will allow you to use special embedded text functions *",
             inText: "(selector) // returns innerText from inside the object with the SELECTOR you input",
             getValue: "(selector) // returns the value of the element with specified SELECTOR *SELECTOR must be given inside quotation*",
