@@ -5,7 +5,11 @@
  * Copyright MillerDesign Company
  * Released under the MIT license
  * https://opensource.org/licenses/mit-license.php
+<<<<<<< HEAD:Friendly.js
  * To reed more about licence, please open LICENCE.md
+=======
+ * To read more about licence, please open LICENCE.md
+>>>>>>> victorrozenko:Friendly JavaScript Library v1.0/Friendly.js
  *
  * Date: 11-23-2016
  *
@@ -14,6 +18,10 @@
 
 var Friendly = (function() {
     return {
+        biAnswer: function() {
+            var x = Friendly.biRandom();
+            if (x == 0) { return "no"; } else { return "yes"; } // randomly returns YES or NO
+        },
         biBool: function() {
             var x = Friendly.biRandom();
             if (x == 0) { return false; } else { return true; } // randomly returns TRUE or FALSE
@@ -166,12 +174,25 @@ var Friendly = (function() {
                 console.log("VALUE OF INPUT IS INCORRECT");
             }
         },
+        ifSqr: function(num) {
+            if (typeof num == "number") {
+                var dev = Math.sqrt(num), // checks if the number (NUM) of your input is a square of any rational number and if so returns TRUE, if not so reutrns FALSE
+                    devDec = dev - Math.floor(dev);
+                if (devDec == 0) {
+                    return true;
+                } else {
+                    return false;
+                }
+            } else {
+                console.log("VALUE OF INPUT IS INCORRECT");
+            }
+        },
         inText: function(selector) {
             if (typeof selector == "string") { 
                 return Friendly.getEl(selector).innerText; // returns TEXT from inside the object with the SELECTOR you input
             } else { console.log('SELECTOR IS UNDEFINED OR DEFINED INCORRECTLY'); }
         },
-        fValue: function(selector) {
+        getValue: function(selector) {
             if (typeof selector == "string") { 
                 return Friendly.getEl(selector).value; // returns the value of the element with specified SELECTOR *SELECTOR must be given inside quotation marks*
             } else { console.log('SELECTOR IS UNDEFINED OR DEFINED INCORRECTLY'); }
@@ -192,7 +213,11 @@ var Friendly = (function() {
             } else { console.log('ONE OF THE VARIABLES IS UNDEFINED OR DEFINED INCORRECTLY'); }
         },
         replacer: function(string) {
+<<<<<<< HEAD:Friendly.js
             return string.replace("*","<b>").replace("**","</b>").replace("^","<i>").replace("^^","</i>"); // function used to run all the specialised text apparatus
+=======
+            return string.replace("*","<b>").replace("**","</b>").replace("^","<i>").replace("^^","</i>").replace("_|","<br>"); // function used to run all the specialised text apparatus
+>>>>>>> victorrozenko:Friendly JavaScript Library v1.0/Friendly.js
         },
         roundDown: function(num) {
             if (typeof num == "number") {
@@ -237,6 +262,7 @@ var Friendly = (function() {
 
         // help module
         help: {
+            biAnswer: "() // rando,ly returns YES or NO",
             biBool: "() // randomly returns TRUE or FALSE",
             biRandom: "() // randomly returns 1 or 0",
             bottomHTML: "(selector, add, apparatus) // puts the value of your input (ADD) in the bottom of the element with the given SELECTOR * if you define last variable as true it will allow you to use special embedded text functions *",
@@ -246,9 +272,13 @@ var Friendly = (function() {
             delEl: "(parent, child) // removes CHILD from the PARENT",
             getEl: "(selector) // gets element by SELECTOR so you can apply actions to it",
             ifPrime: "(num) // checks if number (NUM) you input is prime and if so returns TRUE, if not so, retuns FALSE",
+<<<<<<< HEAD:Friendly.js
+=======
+            ifSqr: "(num) // checks if the number (NUM) of your input is a square of any rational number and if so returns TRUE, if not so reutrns FALSE",
+>>>>>>> victorrozenko:Friendly JavaScript Library v1.0/Friendly.js
             html: "(selector, replace, apparatus) // replaces the innerHTML value of the element with given SELECTOR with the value of your input (REPLACE) or returns HTML from inside the object with the selector you input if REPLACE is undefined * if you define last variable as true it will allow you to use special embedded text functions *",
             inText: "(selector) // returns innerText from inside the object with the SELECTOR you input",
-            fValue: "(selector) // returns the value of the element with specified SELECTOR *SELECTOR must be given inside quotation*",
+            getValue: "(selector) // returns the value of the element with specified SELECTOR *SELECTOR must be given inside quotation*",
             inBetween: "(num, min, max) // checks if the number (NUM) is placed in between MIN and MAX *excluding MIN and MAX* and returns TRUE if so of FALSE if not so",
             multiRandom: "(min, max) // randomly returns number in between MIN and MAX excluding MAX",
             multiWholeRandom: "(min, max) // randomly returns whole number in betwen MIN and MAX excluding MAX",
