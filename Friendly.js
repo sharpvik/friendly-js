@@ -188,7 +188,7 @@ var Friendly = (function() {
                 return Friendly.getEl(selector).innerText; // returns TEXT from inside the object with the SELECTOR you input
             } else { console.log('SELECTOR IS UNDEFINED OR DEFINED INCORRECTLY'); }
         },
-        fValue: function(selector) {
+        getValue: function(selector) {
             if (typeof selector == "string") { 
                 return Friendly.getEl(selector).value; // returns the value of the element with specified SELECTOR *SELECTOR must be given inside quotation marks*
             } else { console.log('SELECTOR IS UNDEFINED OR DEFINED INCORRECTLY'); }
@@ -266,7 +266,7 @@ var Friendly = (function() {
             ifPrime: "(num) // checks if number (NUM) you input is prime and if so returns TRUE, if not so, retuns FALSE",
             html: "(selector, replace, apparatus) // replaces the innerHTML value of the element with given SELECTOR with the value of your input (REPLACE) or returns HTML from inside the object with the selector you input if REPLACE is undefined * if you define last variable as true it will allow you to use special embedded text functions *",
             inText: "(selector) // returns innerText from inside the object with the SELECTOR you input",
-            fValue: "(selector) // returns the value of the element with specified SELECTOR *SELECTOR must be given inside quotation*",
+            getValue: "(selector) // returns the value of the element with specified SELECTOR *SELECTOR must be given inside quotation*",
             inBetween: "(num, min, max) // checks if the number (NUM) is placed in between MIN and MAX *excluding MIN and MAX* and returns TRUE if so of FALSE if not so",
             multiRandom: "(min, max) // randomly returns number in between MIN and MAX excluding MAX",
             multiWholeRandom: "(min, max) // randomly returns whole number in betwen MIN and MAX excluding MAX",
