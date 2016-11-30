@@ -14,6 +14,10 @@
 
 var Friendly = (function() {
     return {
+        biAnswer: function() {
+            var x = Friendly.biRandom();
+            if (x == 0) { return "no"; } else { return "yes"; } // randomly returns YES or NO
+        },
         biBool: function() {
             var x = Friendly.biRandom();
             if (x == 0) { return false; } else { return true; } // randomly returns TRUE or FALSE
@@ -250,6 +254,7 @@ var Friendly = (function() {
 
         // help module
         help: {
+            biAnswer: "() // rando,ly returns YES or NO",
             biBool: "() // randomly returns TRUE or FALSE",
             biRandom: "() // randomly returns 1 or 0",
             bottomHTML: "(selector, add, apparatus) // puts the value of your input (ADD) in the bottom of the element with the given SELECTOR * if you define last variable as true it will allow you to use special embedded text functions *",
