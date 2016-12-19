@@ -209,7 +209,16 @@ var Friendly = (function() {
             } else { console.log('ONE OF THE VARIABLES IS UNDEFINED OR DEFINED INCORRECTLY'); }
         },
         replacer: function(string) {
-            return string.replace("*","<b>").replace("**","</b>").replace("^","<i>").replace("^^","</i>").replace("_|","<br>"); // function used to run all the specialised text apparatus
+            var beginSyms = ["**","*","^^","^","_|"],
+                endSyms = ["</b>","<b>","</i>","<i>","<br>"];
+            
+            for ( i = 0; i < beginSyms.length; i++ ) {
+                while ( string.indexOf(beginSyms[i]) > (-1) ) {
+                    string = string.replace(beginSyms[i], endSyms[i]); // function used to run all the specialised text apparatus
+                }
+            }
+            
+            return string;
         },
         roundDown: function(num) {
             if (typeof num == "number") {
