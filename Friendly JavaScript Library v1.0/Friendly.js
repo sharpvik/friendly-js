@@ -150,7 +150,7 @@ var Friendly = (function() {
         },
         ifPrime: function(num) {
             if (typeof num == "number") {
-                var x = 1, counter = 0; // checks if number (NUM) you input is prime and if so returns TRUE if so or FALSE if not so
+                var x = 1, counter = 0; // checks if number (NUM) you input is prime and returns TRUE if so or FALSE if not so
                 while ((x <= num) && (counter < 3)) {
                     var dev = num / x,
                         devDec = dev - Math.floor(dev);
